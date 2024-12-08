@@ -1,0 +1,27 @@
+---
+title: "Leaflet Map Assignment"
+author: "Mohan R"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+# Introduction  
+
+The goal of this assignment is to create a web page using R Markdown that features a map created with Leaflet.
+
+# Map of Bangalore  
+
+The map below shows the location of **Bangalore, India.**  
+
+```{r, echo=FALSE}
+# Load the leaflet library
+library(leaflet)
+
+# Create the map
+my_map <- leaflet() %>%
+  addTiles() %>% 
+  addMarkers(lat = 12.9716, lng = 77.5946, popup = "Bangalore, India")
+
+# Show the map
+my_map
+```
